@@ -1,0 +1,32 @@
+Problem Statement
+Find the minimum prime number greater than or equal to X.
+Input
+The only line of the input contains a single integer X
+
+Constraints:
+2 ≤ X ≤ 105
+Output
+Print the answer
+Example
+Sample Input 1:
+20
+
+Sample Output 1:
+23
+
+Sample Explanation 1:
+The minimum prime number greater than or equal to 20 is 23.
+
+
+Sample Input 2:
+99992
+
+Sample Output 2:
+100003
+
+
+Sample Input 3:
+2
+
+Sample Output 3:
+2
