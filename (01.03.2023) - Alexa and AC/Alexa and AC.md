@@ -2,7 +2,7 @@
 
 - [Problem Description](#problem-description)
 - [Input](#input)
-- [Output](#output)
+- [Output](#expected-output)
 - [Intuition](#intuition)
 - [Complexity Analysis](#complexity-analysis)
 - [Solution](#solution)
@@ -16,13 +16,11 @@ Alexa will turn on the air conditioner if, and only if, the temperature of the r
 - $-40 \leq X \leq 40$
 - $X$ is an integer.
 
-## Input / Expected Output
-
-### Input
+## Input
 
 The input consists of a single integer **X**.
 
-### Output
+## Expected Output
 
 Print `Yes` if the air conditioner will turn on; otherwise, print `No`.
 

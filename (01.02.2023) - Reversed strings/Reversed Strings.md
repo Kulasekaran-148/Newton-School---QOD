@@ -1,7 +1,8 @@
 # Table of Contents
 
 - [Problem Description](#problem-description)
-- [Input / Expected Output](#input-expected-output)
+- [Input](#input)
+- [Expected output](#expected-output)
 - [Intuition](#intuition)
 - [Complexity Analysis](#complexity-analysis)
 - [Solution](#solution)
@@ -17,16 +18,14 @@ You are given integers **L**, **R**, and a string **S** consisting of lowercase 
 - **L** and **R** are integers.
 - $( 1 \leq L \leq R \leq |S| )$
 
-## Input / Expected Output
-
-### Input
+## Input
 
 The input consists of two lines:
 
 1. The first line contains integers **L** and **R** separated by a space.
 2. The second line contains the string **S**.
 
-### Output
+## Expected Output
 
 Print the string after reversing the order of the **L-th** through **R-th** characters.
 
