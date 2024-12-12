@@ -8,29 +8,25 @@
 
 ## Problem Description
 
-Is it possible to get a sum of B when throwing a die with six faces 1, 2, …, 6 A times? If it is possible to get a sum of B, print Yes; otherwise, print No.
-
+Emilia loves to play with numbers. She is given integers $A, B,$ and $C$. Determine whether $A_2 + B_2 < C_2$ holds true.
 
 ### Constraints
 
-- $1 \leq A \leq 100$
-- $1 \leq B \leq 1000$
-- A and B are integers
+- $0 \leq A \leq 1000$
+- $0 \leq B \leq 1000$
+- $0 \leq C \leq 1000$
+- $A, B,$ and $C$ are integers.
 
 ## Input
 
-The input consists of two space-separated integers.
-
-```plain
-A B
-```
+The input consists of three space-separated integers $A, B,$ and $C$.
 
 ### Example 1
 
 **Input:**
 
 ```plain
-2 11
+2 2 4
 ```
 
 **Output:**
@@ -44,7 +40,7 @@ Yes
 **Input:**
 
 ```plain
-2 13
+10 10 10
 ```
 
 **Output:**
@@ -70,13 +66,9 @@ No
 ## Solution
 
 ```C
-#include <stdio.h>
-int main() {
-    int a,b;
-    scanf("%d %d",&a,&b);
-    if(b<=(a*6) && b>=a)
-        {printf("Yes");}
-    else{printf("No");}
-    return 0;
-}
+a,b,c=map(int,input().split())
+if(a**2+b**2<c**2):
+    print("Yes",end="")
+else:
+    print("No",end="")
 ```

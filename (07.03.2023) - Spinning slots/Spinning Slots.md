@@ -8,35 +8,32 @@
 
 ## Problem Description
 
-Is it possible to get a sum of B when throwing a die with six faces 1, 2, …, 6 A times? If it is possible to get a sum of B, print Yes; otherwise, print No.
-
+Edward is playing the slots. The result of a spin is represented by three uppercase English letters $C_1, C_2, and C_3$. It is considered a win when all of them are the same letter.
+Determine whether Edward will win or not. If the result is a win, print Won; otherwise, print Lost.
 
 ### Constraints
 
 - $1 \leq A \leq 100$
 - $1 \leq B \leq 1000$
-- A and B are integers
+- $S$ consists of 3 characters all of which are uppercase English letters.
+
 
 ## Input
 
-The input consists of two space-separated integers.
-
-```plain
-A B
-```
+The input consists of a string $S$
 
 ### Example 1
 
 **Input:**
 
 ```plain
-2 11
+"SSS"
 ```
 
 **Output:**
 
 ```plain
-Yes
+"Won"
 ```
 
 ### Example 2
@@ -44,13 +41,13 @@ Yes
 **Input:**
 
 ```plain
-2 13
+"WVW"
 ```
 
 **Output:**
 
 ```plain
-No
+"Lost"
 ```
 
 ## Intuition
@@ -70,13 +67,9 @@ No
 ## Solution
 
 ```C
-#include <stdio.h>
-int main() {
-    int a,b;
-    scanf("%d %d",&a,&b);
-    if(b<=(a*6) && b>=a)
-        {printf("Yes");}
-    else{printf("No");}
-    return 0;
-}
+s1 = input()
+if(s1[0]==s1[1] and s1[0]==s1[2]):
+    print("Won",end="")
+else:
+    print("Lost",end="")
 ```

@@ -8,7 +8,8 @@
 
 ## Problem Description
 
-Is it possible to get a sum of B when throwing a die with six faces 1, 2, …, 6 A times? If it is possible to get a sum of B, print Yes; otherwise, print No.
+We have a string S consisting of uppercase English letters. Additionally, an integer N will be given. Shift each character of S by N in alphabetical order (see below), and print the resulting string. We assume that A follows Z. For example, shifting A by 2 results in C (A → B → C), and shifting Y by 3 results in B (Y → Z → A → B).
+
 
 
 ### Constraints
@@ -19,10 +20,11 @@ Is it possible to get a sum of B when throwing a die with six faces 1, 2, …, 6
 
 ## Input
 
-The input consists of two space-separated integers.
+The input contains a number and a string separated by a new line.
 
 ```plain
-A B
+N
+S
 ```
 
 ### Example 1
@@ -30,13 +32,14 @@ A B
 **Input:**
 
 ```plain
-2 11
+2
+ABCXYZ
 ```
 
 **Output:**
 
 ```plain
-Yes
+CDEZAB
 ```
 
 ### Example 2
@@ -44,13 +47,29 @@ Yes
 **Input:**
 
 ```plain
-2 13
+0
+ABCXYZ
 ```
 
 **Output:**
 
 ```plain
-No
+ABCXYZ
+```
+
+### Example 3
+
+**Input:**
+
+```plain
+13
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+```
+
+**Output:**
+
+```plain
+NOPQRSTUVWXYZABCDEFGHIJKLM
 ```
 
 ## Intuition
@@ -70,13 +89,18 @@ No
 ## Solution
 
 ```C
-#include <stdio.h>
-int main() {
-    int a,b;
-    scanf("%d %d",&a,&b);
-    if(b<=(a*6) && b>=a)
-        {printf("Yes");}
-    else{printf("No");}
-    return 0;
-}
+n=int(input())
+n=n%26
+s=input()
+
+def shift_alphabet(s, n):
+    result = ""
+    n = n % 26
+    for char in s:
+        if char.isalpha() and char.isupper():
+            result += chr((ord(char) - ord('A') + n) % 26 + ord('A'))
+        else:
+            result += char
+    return result
+print(shift_alphabet(s,n))
 ```
