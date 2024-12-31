@@ -8,38 +8,28 @@
 
 ## Problem Description
 
-There are N trees. The $i^{th}$ tree bears $A_i$ nuts. Chipmunk will harvest nuts from the trees in the following manner:
-
-- From a tree with 10 or fewer nuts, she does not take nuts.
-- From a tree with more than 10 nuts, she takes all but 10 nuts.
-- Find the total number of nuts Chipmunk will take from the trees.
+You are given a string S consisting of lowercase English characters. The length of S is between 1 and 3, inclusive. Print the string of length 6 that is a repetition of S. It can be shown that there uniquely exists such a string under the Constraints of this problem.
 
 ### Constraints
 
-- $1 \leq N \leq 1000$
-- $0 \leq A_i \leq 1000$
-- All values in the input are integers
+- S is a string consisting of lowercase English characters of length between 1 and 3, inclusive.
 
 ## Input
 
-Input is given from Standard Input in the following format:
-
-- N
-- $A_1… A_N$
+The input consists of a string S
 
 ### Example 1
 
 **Input:**
 
 ```plain
-3
-6 17 28
+abc
 ```
 
 **Output:**
 
 ```plain
-25
+abcabc
 ```
 
 ### Example 2
@@ -47,14 +37,13 @@ Input is given from Standard Input in the following format:
 **Input:**
 
 ```plain
-4
-8 9 10 11
+zz
 ```
 
 **Output:**
 
 ```plain
-1
+zzzzzz
 ```
 
 ### Example 3
@@ -88,5 +77,9 @@ Input is given from Standard Input in the following format:
 
 ## Solution
 
-```C
+```python
+s = input()
+length = len(s)
+for i in range (int(6/length)):
+    print(s,end="")
 ```
